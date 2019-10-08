@@ -6,7 +6,7 @@ var happyTurkey = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
+	background("#3abeff");
 
   for (var i=0; i<30; i++) {
   var  myTurkey = new turkey(random(0,width),-100, 100, 100);
@@ -18,18 +18,20 @@ function setup() {
 }
 
 function draw() {
-	//Sky color
-	background("#DADADA");
-  text("FREE IT", 700, 300)
+	background("#3abeff");
+// text
+stroke("orange")
+  text("I would like it fried", 575, 300)
   textSize(32);
   textFont("Helvetica")
+
 for (var a=0; a<happyTurkey.length; a++) {
   happyTurkey[a].display();
   happyTurkey[a].move();
 }
 }
 
-// flying turkeys
+// flying eggs
  function turkey (_x, _y, _width, _height) {
 
    this.x = _x;
@@ -44,15 +46,14 @@ for (var a=0; a<happyTurkey.length; a++) {
        this.y = _y;
      }
    }
-//nipples
+//eggs
    this.display = function () {
-     fill("pink");
+     fill("white");
      noStroke();
      ellipse (this.x, this.y, this.width, this.height);
-     fill("brown")
-     ellipse(this.x, this.y,this.width/7, this.height/7);
-     fill("#3e1c00")
-     ellipse(this.x, this.y,this.width/12, this.height/12);
+     fill("#ffd963")
+     ellipse(this.x, this.y,this.width/3, this.height/3);
+
 
    }
 
